@@ -21,7 +21,7 @@
     h1,h2,h3,.label,.btn { font-family:'Inter',sans-serif; }
 
     /* NAV */
-    nav {
+    body > nav {
       position:fixed; top:0; left:0; right:0; z-index:100;
       padding:22px 6vw;
       display:flex; justify-content:space-between; align-items:center;
@@ -167,6 +167,16 @@
       .next,.quote-section { grid-template-columns:1fr; gap:48px; }
       .footer-logo-sq { width:70px !important; height:auto !important; max-width:70px !important; display:block !important; margin:0 auto !important; opacity:1; }
     footer { flex-direction:column; gap:16px; }
+    }
+  
+    /* — fixes: top nav only, centered footer, mobile nav — */
+    footer { flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:16px; }
+    .footer-bottom { display:flex; flex-direction:column; align-items:center; gap:12px; }
+    .footer-logo-sq { display:block; margin:0 auto; }
+    @media(max-width:600px){
+      body > nav { padding:18px 5vw; gap:12px; }
+      .nav-logo { height:12px; max-width:52vw; width:auto; }
+      .nav-ig { font-size:9px; letter-spacing:0.1em; white-space:nowrap; }
     }
   </style>
 </head>

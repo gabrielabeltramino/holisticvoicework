@@ -12,7 +12,7 @@
     body{font-family:'Fira Code',monospace;background:var(--black);color:var(--white);overflow-x:hidden}
     h1,h2,h3,.label,.btn,.nav-ig,.footer-brand,.footer-nav a{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color .2s}
 
-    nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 6vw;
+    body>nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 6vw;
       display:flex;justify-content:space-between;align-items:center;
       background:rgba(0,0,0,0.94);backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(255,255,255,0.05)}
@@ -157,6 +157,9 @@
     .gdpr-label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;margin-top:4px}
     .gdpr-label input[type=checkbox]{margin-top:3px;flex-shrink:0;accent-color:#000;width:14px;height:14px}
     .gdpr-label span{font-family:'Fira Code',monospace;font-size:11px;line-height:1.6;color:var(--charcoal)}
+
+/* fixes: top nav only (footer-nav was being pinned to the top), hero buttons wrap on small screens */
+@media(max-width:600px){.hero-cta{flex-shrink:1;flex-wrap:wrap;max-width:100%;gap:8px 20px}}
 </style>
 </head>
 <body>
